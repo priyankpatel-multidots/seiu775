@@ -1,0 +1,176 @@
+# Translation of Plugins - Inactive Logout - Stable (latest release) in Spanish (Spain)
+# This file is distributed under the same license as the Plugins - Inactive Logout - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2022-10-28 10:40:52+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: GlotPress/4.0.0-alpha.3\n"
+"Language: es\n"
+"Project-Id-Version: Plugins - Inactive Logout - Stable (latest release)\n"
+
+#: views/tabs/tpl-inactive-logout-basic.php:50
+msgid "Timeout Countdown Period"
+msgstr "Cuenta atrás del período de tiempo de espera"
+
+#: core/Bootstrap.php:159
+msgid "Logging in. Please wait"
+msgstr "Accediendo. Por favor, espera"
+
+#: core/Bootstrap.php:157 core/Bootstrap.php:161
+msgid "Ok"
+msgstr "Aceptar"
+
+#: core/Bootstrap.php:158
+msgid "Close without Reloading"
+msgstr "Cerrar sin recargar"
+
+#: views/tabs/tpl-inactive-logout-advanced.php:71
+msgid "Disable Inactive Logout"
+msgstr "Desactivar la desconexión por inactividad"
+
+#: legacy/class-inactive-logout-helpers.php:217
+msgid "Need more features ?"
+msgstr "¿Necesitas más características?"
+
+#: core/Helpers.php:160 legacy/class-inactive-logout-helpers.php:228
+msgid "Is inactive logout or few functionalities not working for you ? Might be because you have added this user role in Role Based tab ?"
+msgstr "¿No te funciona Inactive Logout o algunas funcionalidades? ¿Podría deberse a que ha añadido este perfil de usuario en la pestaña «Basado en el perfil»?"
+
+#: views/tabs/tpl-inactive-logout-advanced.php:77
+#: views/tabs/tpl-inactive-logout-basic.php:88
+msgid "Prevent Multiple Logins"
+msgstr "Evitar acceso múltiple"
+
+#. Description of the plugin
+msgid "Automatically logout idle user sessions, even if they are on the front end! Fully configurable & easy to use."
+msgstr "Cerrar sesión automáticamente a los usuarios inactivos, incluso si están en la portada. Totalmente personalizable y fácil de usar."
+
+#: views/tabs/tpl-inactive-logout-basic.php:61
+msgid "When the timeout pop-up appears, the user is not logged out instantly. It allows the user the chance to continue, or a logout will occur within 10 seconds. Check this box in order to immediately logout the user after the idle timeout minute."
+msgstr "Cuando aparece el mensaje emergente, la sesión del usuario no se cierra inmediatamente, permitiéndole continuar si así lo desea. Pero pasados 10 segundos más de inactividad, sí se cierra su sesión. Desactiva esta característica si quieres que la sesión se cierre nada más pasado el periodo de inactividad indicado."
+
+#. Author of the plugin
+msgid "Deepen Bajracharya"
+msgstr "Deepen Bajracharya"
+
+#: views/tpl-inactive-logout-settings.php:48
+msgid "Support"
+msgstr "Soporte"
+
+#: core/Bootstrap.php:162
+msgid "Session Timeout"
+msgstr "Límite de tiempo de sesión"
+
+#: views/tabs/tpl-inactive-logout-basic.php:133
+msgid "Select a page to redirect to after session timeout and clicking OK."
+msgstr "Selecciona una página a la que redirigir el usuario cuando hace clic en OK después de que su sesión se haya cerrado."
+
+#: views/tabs/tpl-inactive-logout-basic.php:107
+msgid "External Page Redirect"
+msgstr "Página de redirección externa"
+
+#: views/tabs/tpl-inactive-logout-basic.php:100
+msgid "If not checked then user will be logged out to login screen after timeout."
+msgstr "Si no activas esta opción, se cerrará la sesión del usuario y se le enviará a la pantalla de acceso cuando haya pasado el límite de tiempo de inactividad."
+
+#: views/tabs/tpl-inactive-logout-basic.php:97
+msgid "Enable Redirect"
+msgstr "Activar redirección"
+
+#: views/tabs/tpl-inactive-logout-basic.php:84
+msgid "Use {wakup_timout} to show minutes. This is message that will be shown when inactive."
+msgstr "Usa {wakeup_timeout} para mostrar los minutos. Se mostrará este mensaje cuando esté inactivo."
+
+#: views/tabs/tpl-inactive-logout-basic.php:58
+msgid "Disable Timeout Countdown"
+msgstr "Desactivar cuenta atrás"
+
+#: views/tabs/tpl-inactive-logout-basic.php:46
+msgid "Message to be shown when idle timeout screen shows."
+msgstr "Mensaje a mostrar cuando aparece la pantalla de inactividad."
+
+#: views/tabs/tpl-inactive-logout-basic.php:34
+msgid "Idle Message Content"
+msgstr "Mensaje de inactividad"
+
+#: views/tabs/tpl-inactive-logout-basic.php:26
+msgid "Idle Timeout"
+msgstr "Límite de tiempo de inactividad"
+
+#: views/tabs/tpl-inactive-logout-basic.php:21
+msgid "When checked below settings will be effective and used for all sites in the network."
+msgstr "Si se activa, los ajustes se aplicarán a todos los sitios de la red."
+
+#: views/tabs/tpl-inactive-logout-basic.php:18
+msgid "Override for all sites"
+msgstr "Sobrescribir en todos los sitios"
+
+#: views/tabs/tpl-inactive-logout-advanced.php:143
+#: views/tabs/tpl-inactive-logout-basic.php:192
+msgid "Save Changes"
+msgstr "Guardar cambios"
+
+#: views/tabs/tpl-inactive-logout-advanced.php:115
+#: views/tabs/tpl-inactive-logout-basic.php:125
+msgid "No Posts Found."
+msgstr "No se encontraron entradas."
+
+#: views/tabs/tpl-inactive-logout-advanced.php:98
+msgid "Set Global Redirect Page"
+msgstr "Establecer página de redirección global"
+
+#: views/tabs/tpl-inactive-logout-advanced.php:65
+#: views/tabs/tpl-inactive-logout-basic.php:104
+msgid "Redirect Page"
+msgstr "Página de redirección"
+
+#: views/tabs/tpl-inactive-logout-advanced.php:59
+msgid "Timeout (In Minutes)"
+msgstr "Límite (en minutos)"
+
+#: views/tabs/tpl-inactive-logout-advanced.php:57
+msgid "User Role"
+msgstr "Perfil de usuario"
+
+#: views/tabs/tpl-inactive-logout-advanced.php:45
+msgid "This will allow you to define different timeout constraint according to different selected user roles."
+msgstr "Con esto puedes definir diferentes restricciones de tiempo según el perfil de usuario."
+
+#: views/tabs/tpl-inactive-logout-advanced.php:30
+msgid "Enable Multi-User Feature"
+msgstr "Activar la característica de multiusuario"
+
+#: views/tabs/tpl-inactive-logout-advanced.php:25
+msgid "This will enable multi-user role timeout functionality."
+msgstr "Esto activa el límite de tiempo por perfil de usuario."
+
+#: views/tabs/tpl-inactive-logout-advanced.php:19
+msgid "Multi-Role Timeout"
+msgstr "Límite de tiempo multiperfil"
+
+#: core/Helpers.php:22 legacy/class-inactive-logout-helpers.php:66
+#: views/tabs/tpl-inactive-logout-basic.php:29
+msgid "Minute(s)"
+msgstr "Minuto(s)"
+
+#: core/Ajax.php:43
+msgid "Reset advanced settings successful."
+msgstr "Se restablecieron los ajustes avanzados."
+
+#: core/Bootstrap.php:164
+msgid "You have been logged out because of inactivity."
+msgstr "Se ha cerrado tu sesión por inactividad."
+
+#. Plugin Name of the plugin
+#: core/AdminFunctions.php:41 core/AdminFunctions.php:47
+#: core/AdminFunctions.php:58
+msgid "Inactive Logout"
+msgstr "Inactive Logout"
+
+#: core/AdminFunctions.php:41 core/AdminFunctions.php:47
+#: core/AdminFunctions.php:58 views/tpl-inactive-logout-settings.php:9
+msgid "Inactive User Logout Settings"
+msgstr "Ajustes de cierre de sesiones inactivas"

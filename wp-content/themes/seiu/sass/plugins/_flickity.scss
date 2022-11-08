@@ -1,0 +1,46 @@
+.flickity-prev-next-button {
+	width: 40px;
+	height: 60px;
+	border-radius: 0;
+	padding: 0;
+	background: $color-secondary;
+
+	svg {
+		width: 28px;
+		height: 18px;
+	}
+
+	&.previous {
+		left: 1rem;
+	}
+
+	&.next {
+		right: 1rem;
+	}
+
+	@include media-breakpoint-down(md) {
+		&.previous {
+			left: 0rem;
+		}
+
+		&.next {
+			right: 0rem;
+		}
+	}
+
+	@include media-breakpoint-down(sm) {
+		&.previous {
+			height: 45px;
+			width: 25px;
+		}
+
+		&.next {
+			height: 45px;
+			width: 25px;
+		}
+	}
+}
+
+.flickity-prev-next-button .flickity-button-icon {
+
+}

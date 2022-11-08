@@ -1,0 +1,115 @@
+// Default Page Content
+.page__content {
+  > .container {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+  }
+
+  &__left {
+    padding-top: 3rem;
+    padding-bottom: 2.5rem;
+    padding-left: 100px;
+    padding-right: 150px;
+    background: $color-white;
+  }
+
+  .post-thumbnail {
+    img {
+      max-height: 40rem;
+      object-fit: contain;
+    }
+  }
+
+  .card-member-resource-center {
+    padding-top: 5rem;
+    z-index: -1;
+  }
+
+  .btn-wrapper--join-now {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+
+  @include media-breakpoint-down(xl) {
+    &__left {
+      padding-left: 4rem;
+      padding-right: 6rem;
+    }
+
+    .post-thumbnail {
+      img {
+        max-height: 30rem;
+      }
+    }
+
+    .card-member-resource-center {
+      // margin-top: -3rem;
+      padding-top: 5rem;
+    }
+
+    .btn-wrapper--join-now {
+      padding-left: 4rem;
+      padding-right: 4rem;
+    }
+  }
+  @include media-breakpoint-down(lg) {
+    > .container {
+      grid-template-columns: auto;
+    }
+    &__left {
+      padding-left: 4rem;
+      padding-right: 4rem;
+    }
+    .post-thumbnail {
+      margin-top: 2rem;
+      margin-left: 0;
+    }
+
+    .btn-wrapper--join-now {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    > .container {
+      grid-template-columns: auto;
+    }
+    &__left {
+      padding-left: 1rem;
+      padding-right: 1rem;
+      margin-left: -1rem;
+      margin-right: -1rem;
+    }
+  }
+}
+
+// For New members page.
+.page--new-members {
+  .post-thumbnail {
+		margin-top: -75px;
+		margin-left: -75px;
+    margin-bottom: -75px;
+  }
+
+  @include media-breakpoint-down(xl) {
+    .post-thumbnail {
+      margin-top: -3rem;
+      margin-left: -3rem;
+      margin-bottom: -3rem;
+    }
+  }
+
+  .card-member-resource-center {
+    //z-index: 1;
+  }
+}
+
+
+// Page Membership Plus
+.page-membership-plus {
+  .slider-module {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+}

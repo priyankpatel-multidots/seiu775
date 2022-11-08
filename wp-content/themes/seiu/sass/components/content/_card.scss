@@ -1,0 +1,133 @@
+.card {
+  position: relative;
+  background: $color-white;
+  box-shadow: rgba(0,0,0,.15) 5px 5px 10px;
+  padding: 1.25rem 6rem 2rem 2.5rem;
+  transition: all ease 0.3s;
+
+  .card__date {
+    a {
+      &:hover {
+        text-decoration: underline;
+        color: $color-primary;
+      }
+    }
+  }
+
+  &--has-photo {
+    .card__img-wrapper {
+
+    }
+  }
+
+  .card__img-wrapper {
+    margin-top: -3.75rem;
+    z-index: $zindex-1;
+  }
+
+  &__date {
+    margin-bottom: 1rem;
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  &__title {
+    margin-top: 0;
+    a {
+    color : #4E2683;
+    }
+  }
+
+  &__excerpt {
+    margin-top: 1.25rem;
+  }
+  .btn {
+    margin-top: 1.25rem;
+    letter-spacing: -0.1px;
+  }
+
+  &__link {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+  }
+
+  &--post--masonry{
+    padding-bottom: 3rem;
+
+    .btn {
+      @include media-breakpoint-up(xl) {
+        margin-top: 2.5rem;
+      }
+    }
+  }
+  
+
+  @include media-breakpoint-down(xl) {
+    padding: 1.25rem 4rem 2rem 2.5rem;
+  }
+
+  @include media-breakpoint-down(lg) {
+    padding: 1.25rem 3.5rem 2rem 2.5rem;
+  }
+
+  @include media-breakpoint-down(md) {
+    &--post-index-1 {
+      margin-top: 3rem;
+    }
+
+    &__date {
+      margin-top: 1rem;
+    }
+  }
+}
+
+// List View
+.featured-posts--list-view {
+  // background: $color-white;
+  .card {
+    display: grid;
+    grid-gap: 1.5rem;
+    box-shadow: none;
+    padding: 0;
+    margin-bottom: 3rem;
+
+    &--has-image {
+      grid-template-columns: 3fr 4fr;
+
+    }
+
+    &__date {
+      margin-top: 0;
+    }
+
+    &__title {
+      color: $color-primary;
+      margin-bottom: 0;
+    }
+
+    &__excerpt {
+      margin-top: 1rem;
+    }
+
+    .btn {
+      margin-top: 1rem;
+      letter-spacing: 0;
+      text-transform: uppercase;
+    }
+  }
+
+  .card__img-wrapper {
+    margin-top: 0;
+    z-index: 0;
+  }
+
+  @include media-breakpoint-down(md) {
+    .card {
+      grid-template-columns: auto;
+    }
+  }
+}

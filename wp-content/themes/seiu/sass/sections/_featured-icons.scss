@@ -1,0 +1,102 @@
+.section--featured-icons {
+  text-align: center;
+
+  .featured-icons__list {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    // grid-gap: 1.25rem 1.25rem;
+    align-items: center;
+    max-width: $container-sm;
+    margin: 2rem auto 0;
+
+    @include media-breakpoint-up(md) {
+      margin-top: 3.25rem;
+
+      &.featured-icons__list--3 {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      &.featured-icons__list--4 {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+    @include media-breakpoint-up(lg) {
+      margin-top: 4.5rem;
+    }
+  }
+
+  .featured-icons__item {
+    border-top: 0.5px solid #8f8f8f;
+    border-left: 0.5px solid #8f8f8f;
+    padding: 1rem;
+
+    img {
+      max-width: 100%;
+      width: 25rem;
+    }
+
+    @include media-breakpoint-up(md) {
+      padding: 2rem;
+    }
+    @include media-breakpoint-up(lg) {
+      padding: 2rem;
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    .featured-icons__item:nth-child(1),
+    .featured-icons__item:nth-child(2) {
+      border-top: none;
+    }
+
+    .featured-icons__item:nth-child(2n + 1) {
+      border-left: none;
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+    .featured-icons__list--2 {
+      .featured-icons__item:nth-child(1),
+      .featured-icons__item:nth-child(2) {
+        border-top: none;
+      }
+
+      .featured-icons__item:nth-child(2n + 1) {
+        border-left: none;
+      }
+    }
+
+    .featured-icons__list--3 {
+      .featured-icons__item:nth-child(1),
+      .featured-icons__item:nth-child(2),
+      .featured-icons__item:nth-child(3) {
+        border-top: none;
+      }
+
+      .featured-icons__item:nth-child(3n + 1) {
+        border-left: none;
+      }
+
+      .featured-icons__item img {
+        width: 18rem;
+      }
+    }
+
+    .featured-icons__list--4 {
+      .featured-icons__item:nth-child(1),
+      .featured-icons__item:nth-child(2),
+      .featured-icons__item:nth-child(3),
+      .featured-icons__item:nth-child(4) {
+        border-top: none;
+      }
+
+      .featured-icons__item:nth-child(4n + 1) {
+        border-left: none;
+      }
+      .featured-icons__item img {
+        width: 18rem;
+      }
+    }
+  }
+}
+

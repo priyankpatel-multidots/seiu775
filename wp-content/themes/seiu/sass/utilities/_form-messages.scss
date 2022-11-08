@@ -1,0 +1,27 @@
+//
+// Form Messages
+//
+
+.form-messages {
+	// @include type-p2;
+	padding: 18px 20px;
+	margin-bottom: 20px;
+
+	// background: $background-gray;
+	&--errors {
+		// @include type-label-sm;
+		background: #FFEEEE;
+		color: #FF0000;
+	}
+	&--success {
+		// @include type-label-sm;
+		background: #EEFFEE;
+	}
+	&__message {
+		margin-top: 0;
+		margin-bottom: 5px;
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}

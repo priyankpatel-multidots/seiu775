@@ -1,0 +1,162 @@
+.footer--main {
+  background: $color-primary;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+
+  @include media-breakpoint-up(lg) {
+    padding-top: 5rem;
+    padding-bottom: 7rem;
+  }
+
+  .footer__grid {
+    display: grid;
+    grid-gap: 1.25rem;
+
+    @include media-breakpoint-up(lg) {
+      grid-template-columns: 3fr 4fr 3fr;
+    }
+  }
+
+  .footer__column {
+    .title {
+      color: $color-white;
+      font-size: 1.25rem;
+      line-height: 1.5;
+      padding-bottom: 2rem;
+
+      @include media-breakpoint-up(xl) {
+        font-size: 1.5rem;
+        line-height: 1.25;
+        padding-bottom: 3rem;
+      }
+    }
+
+    a {
+      font-weight: 600;
+    }
+
+    label.title {
+      display: block;
+      cursor: pointer;
+    }
+    
+    ul {
+      margin-left: 0;
+      padding-left: 0;
+      list-style: none;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .footer__logo {
+    margin-bottom: 1.5rem;
+  }
+
+  .footer__address {
+    a {
+      color: $color-white;
+    }
+    p {
+      color: $color-white;
+      margin-bottom: 1rem;
+    }
+  }
+
+  .footer__about-us {
+    a {
+      color: $color-white;
+    }
+    p {
+      color: $color-white;
+      font-size: 20px;
+    }
+  }
+
+  .footer__social {
+    ul {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      margin: 0px;
+      padding: 0px;
+
+      li {
+        margin-left: 1.25rem;
+        margin-bottom: 0;
+
+        &:first-child {
+          margin-left: 0;
+        }
+      }
+
+      a {
+        display: block;
+        transition: all ease 0.3s;
+        &:hover {
+          transform: scale(1.3);
+        }
+      }
+
+      .icon {
+        display: block;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        width: 30px;
+        height: 30px;
+      }
+
+      .icon-linkedin {
+        background-image: url('/wp-content/themes/seiu/images/social-linkedin.svg');
+      }
+      .icon-facebook {
+        background-image: url('/wp-content/themes/seiu/images/social-facebook.svg');
+      }
+      .icon-instagram {
+        background-image: url('/wp-content/themes/seiu/images/social-instagram.svg');
+      }
+      .icon-youtube {
+        background-image: url('/wp-content/themes/seiu/images/social-youtube.svg');
+      }
+      .icon-twitter {
+        background-image: url('/wp-content/themes/seiu/images/social-twitter.svg');
+      }
+    }
+
+    @include media-breakpoint-down(md) {
+      margin-top: 1rem;
+      ul {
+        justify-content: flex-start;
+      }
+    }
+  }
+}
+
+.footer--bottom {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  text-align: center;
+}
+
+.footer__copyright {
+  p {
+    line-height: 1.57;
+    letter-spacing: normal;
+    margin: 0;
+    padding: 0;
+  }
+
+  a {
+    &:hover {
+      text-decoration: underline;
+      color: $color-primary;
+    }
+  }
+}

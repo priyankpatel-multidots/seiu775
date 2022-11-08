@@ -1,0 +1,217 @@
+// button,
+// input[type="button"],
+// input[type="reset"],
+// input[type="submit"] {
+// 	border: 1px solid;
+// 	border-color: $color__border-button;
+// 	border-radius: 3px;
+// 	background: $color__background-button;
+// 	color: rgba(0, 0, 0, 0.8);
+// 	line-height: 1;
+// 	padding: 0.6em 1em 0.4em;
+
+// 	&:hover {
+// 		border-color: $color__border-button-hover;
+// 	}
+
+// 	&:active,
+// 	&:focus {
+// 		border-color: $color__border-button-focus;
+// 	}
+// }
+
+
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+.button,
+.btn {
+  display: inline-block;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.167;
+  /* identical to box height */
+
+  padding: 0.7rem 2rem;
+  text-align: center;
+  text-decoration: none;
+  letter-spacing: 0.833333px;
+
+  white-space: nowrap;
+  transition: all ease 0.3s;
+
+  background: $color-primary;
+  color: $color-white;
+  border: 1px solid $color-primary;
+  cursor: pointer;
+  
+  &:hover,
+  &:focus,
+  &:active {
+    color: $color-primary;
+    background: $color-secondary;
+    border-color: $color-secondary;
+    text-decoration: none;
+  }
+}
+
+.btn--primary {
+  background: $color-primary;
+  color: $color-white;
+  border-radius: 1.5rem;
+  border: 1px solid $color-primary;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $color-primary;
+    background: $color-secondary;
+    border-color: $color-secondary;
+  }
+}
+
+
+.btn--primary-outline {
+  background: $color-primary;
+  color: $color-white;
+  border-radius: 1.5rem;
+  border: 2px solid $color-white;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: $color-white;
+    color: $color-primary;
+    border-color: $color-primary;
+  }
+}
+
+.btn--yellow-outline {
+  background: $color-white;
+  color: $color-black;
+  border-radius: 1.5rem;
+  border: 2px solid $color-yellow;
+}
+
+
+.btn--hover-blue {
+  &:hover,
+  &:focus,
+  &:active {
+    background: $color-blue;
+    color: $color-white;
+  }
+}
+.btn--blue {
+  background: $color-blue;
+  color: $color-white;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $color-white;
+  }
+}
+
+
+.btn--outline-white {
+  background: transparent;
+  border: 1px solid $color-white;
+  color: $color-white;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: inherit;
+    background: $color-white;
+  }
+}
+
+.btn--text {
+  font-weight: 900;
+  text-decoration: none;
+  background: none;
+  color: $color-primary;
+  border: none;
+  padding: 0;
+  transition: all ease 0.3s;
+
+
+
+  &:hover,
+  &:focus,
+  &:active {
+    text-decoration: underline;
+    background: none;
+    border: none;
+  }
+}
+
+.auth-form__buttons {
+  .btn--forgot-password {
+    padding: 0.7rem 2rem;
+  }
+}
+
+.btn-wrapper--join-now {
+  display: flex; 
+  align-items: center;
+  padding: 2.5rem 0;
+
+  .intro-label {
+    margin-bottom: 0;
+  }
+
+  .btn {
+    margin-left: 3rem;
+  }
+
+  @include media-breakpoint-down(md) {
+    display: block;
+    .btn {
+      margin-left: 0;
+      margin-top: 1rem;
+    }
+  }
+}
+
+.btn-wrapper {
+    width: 100%;
+    padding: 45px 0 10px 0;
+    float:left;
+    .btn-wrapper--join {
+      width: 50%;
+      float: left;
+      text-align: center;
+
+      .intro-label {
+        margin-bottom: 0;
+        text-align: center;
+      }
+
+      .btn--primary {
+        display: inline-block;
+        float: none;
+        text-align: center;
+        margin: 12px;
+        padding: 12px 20px;
+        min-width: 198px;
+      }
+
+    }
+}
+.page--with-gray-bg, .page--new-members {
+  .btn-wrapper {
+    padding: 108px 0 138px 0;
+  }
+}
+.intro-module {
+  .section__right {
+    .btn--primary {
+      min-width: 148px;
+      padding: 12px 10px;
+    }
+  }
+}

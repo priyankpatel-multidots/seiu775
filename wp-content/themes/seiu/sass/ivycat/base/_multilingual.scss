@@ -1,0 +1,21 @@
+html {
+  &[lang=es-ES] {
+    .site-header__inner {
+      > .container {
+        // grid-template-columns: 100px auto 120px;
+
+        .main-navigation {
+          li {
+            // padding-left: 12px;
+            // padding-right: 12px;
+            // display: flex;
+            // justify-content: center;
+          }
+        }
+        #menu-members-main-menu-spanish li.menu-item-has-children > ul.sub-menu {
+          width: calc(max(100%,260px));
+        }
+      }
+    }
+  }
+}

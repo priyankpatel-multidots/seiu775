@@ -1,0 +1,38 @@
+.container,
+.container--md,
+.container--sm,
+.container--xs {
+  width: 100%;
+  padding-right: 3rem;
+  padding-left: 3rem;
+  margin-right: auto;
+  margin-left: auto;
+
+  @include media-breakpoint-down(container-md) {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  @include media-breakpoint-down(md) {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+.container {
+  max-width: $container-default;
+}
+
+.container--md {
+  max-width: $container-md;
+}
+.container--sm {
+  max-width: $container-sm;
+}
+.container--xs {
+  max-width: $container-xs;
+}
+
+.page--default .container.container--sm {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}

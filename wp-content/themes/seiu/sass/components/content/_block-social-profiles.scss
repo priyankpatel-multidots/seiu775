@@ -1,0 +1,52 @@
+.wp-block-group__inner-container {
+	padding: 15px;
+	margin: 16px 0;
+}
+
+.block-social-profiles {
+	.entry-content + & {
+		margin-top: 3rem;
+	}
+
+	.block__title {
+		text-transform: uppercase;
+	}
+	ul {
+		margin: 0px;
+		padding: 0px;
+		list-style: none;
+		display: flex;
+		align-items: center;
+		margin-left: -1rem;
+		margin-right: -1rem;
+	}
+	
+	li {
+		padding: 0 1rem;
+		margin: 0;
+		font-size: 0;	
+	}
+
+	svg {
+		font-size: 1rem;
+		height: 2rem;
+		width: auto;
+
+	}
+
+	.social_link {
+		color:  $color-primary;
+
+		svg {
+			fill: $color-primary;
+		}
+
+		&:hover {
+			color:  $color-golden-yellow;
+
+			svg {
+				fill: $color-golden-yellow;
+			}
+		}
+	}
+}

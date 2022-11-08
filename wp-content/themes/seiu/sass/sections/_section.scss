@@ -1,0 +1,102 @@
+section, .section, .wp-block-group.has-background:not(.has-white-background-color) {
+  position: relative;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+
+  .section__title {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    text-transform: capitalize;
+    margin-bottom: 0;
+
+  }
+
+  .section__description {
+    margin-top: 2rem;
+    font-size: 1.5rem;
+  }
+
+  @include media-breakpoint-down(container-md) {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  @include media-breakpoint-down(md) {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+
+    .section__description {
+      margin-top: 1.5rem;
+      font-size: 1.25rem;
+    }
+  }
+}
+
+.section {
+  &--left_aligned {
+    .container {
+      position: relative;
+    }
+
+    @include media-breakpoint-up(xl) {
+      margin-top: 4rem;
+      margin-bottom: 5rem;
+
+      > .container:before {
+        content: '';
+        position: absolute;
+        top: -4rem;
+        width: 25%;
+        right: 0;
+        height: calc(100% + 10rem);
+        background: $color__background-body;
+      }
+
+      .section__inner {
+        max-width: 72%;
+        margin-right: auto;
+      }
+    }
+
+    @include media-breakpoint-up(xxl) {
+      > .container:before {
+        width: calc(25% + 50vw - 668px);
+        right: calc(668px - 50vw);
+      }
+    }
+  }
+
+  &--right_aligned {
+    .container {
+      position: relative;
+    }
+
+    @include media-breakpoint-up(xl) {
+      margin-top: 4rem;
+      margin-bottom: 5rem;
+
+      > .container:before {
+        content: '';
+        position: absolute;
+        top: -4rem;
+        width: 25%;
+        left: 0;
+        height: calc(100% + 10rem);
+        background: $color__background-body;
+      }
+
+      .section__inner {
+        max-width: 72%;
+        margin-left: auto;
+      }
+    }
+
+    @include media-breakpoint-up(xxl) {
+      > .container:before {
+        width: calc(25% + 50vw - 668px);
+        left: calc(668px - 50vw);
+      }
+    }
+  }
+}

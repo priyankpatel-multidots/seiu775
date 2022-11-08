@@ -1,0 +1,293 @@
+.section--membership-plus {
+	position: relative;
+	&:after {
+		content: '';
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: calc(50% - 600px);
+		height: 100%;
+		background: $color__background-body;
+	}
+	.container {
+		position: relative;
+	}
+
+	.slider-button {
+		display: none;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		cursor: pointer;
+		background: $color-secondary;
+		height: 60px;
+		width: 40px;
+
+		border-radius: 0;
+		border: none;
+		color: $color-black;
+		fill: $color-black;
+		padding: 0;
+
+		&:hover {
+			background: $color-white;
+		}
+
+		&.previous {
+			left: -2.75rem;
+		}
+
+		&.next {
+			right: -2.75rem; //Why 2.75rem? => 1.25rem is the right margin of last viewing slider item.
+		}
+
+		svg {
+			width: 28px;
+			height: 18px;
+		}
+
+		@include media-breakpoint-down(xxl) {
+			&.previous {
+				left: -0.5rem;
+			}
+
+			&.next {
+				right: -0.5rem;
+			}
+		}
+	}
+
+	.section__description + .btn-wrapper {
+		text-align: left;
+		position: relative;
+    	z-index: 1;
+		float:none;
+	}
+
+	.btn-wrapper {
+		text-align: center;
+		margin-top: 3rem;
+	}
+}
+
+.membership-plus {
+	&__list-wrapper {
+		position: relative;
+	}
+	&__list {
+		display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 2rem;
+    grid-row-gap: 2.75rem;
+		margin-top: 4rem;
+
+		.flickity-prev-next-button.next {
+			right: -2.75rem;
+		}
+
+		.flickity-prev-next-button.previous {
+			left: -2.75rem;
+		}
+	}
+
+	&__item {
+		display: flex;
+		flex-flow: column-reverse;
+		color: $color-primary;
+		font-weight: bold;
+		justify-content: space-between;
+		text-align: center;
+
+		label {
+			line-height: 1.2;
+		}
+
+		img {
+			margin-bottom: 1.25rem;
+			height: 3.5rem;
+			object-fit: contain;
+		}
+
+		.membership-plus__item-link {
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+	@include media-breakpoint-down(lg) {
+	}
+
+	@include media-breakpoint-down(md) {
+		&__list {
+			margin-top: 3rem;
+			grid-template-columns: repeat(2, 1fr);
+
+			.flickity-prev-next-button.next {
+				right: -1rem;
+			}
+
+			.flickity-prev-next-button.previous {
+				left: -1rem;
+			}
+		}
+
+		.section__title, .section__description {
+			text-align: center;
+		}
+	}
+}
+
+[data-membership-plus-slider-wrapper] {
+	.slider-button {
+		display: block;
+	}
+}
+
+// Membership plus Slider
+[data-membership-plus-slider] {
+	&.membership-plus__list {
+		display: block;
+		margin-top: 3rem;
+	}
+	.membership-plus__item {
+		padding: 2rem;
+		background: $color-primary;
+		color: $color-white;
+		display: flex;
+		flex-flow: column;
+		justify-content: space-between;
+		font-weight: normal;
+		text-align: center;
+		margin-right: 1.25rem;
+		min-height: 12rem;
+
+
+
+		a {
+			color: inherit;
+			text-decoration: none;
+			cursor: pointer;
+		}
+
+		label {
+			line-height: 1.2;
+		}
+
+		img {
+			height: 3.5rem;
+			margin-bottom: 0;
+			object-fit: contain;
+		}
+
+		@include media-breakpoint-down(sm) {
+			min-height: 7rem;
+			padding: 1rem;
+
+			label {
+				font-size: 12px;
+			}
+
+			img {
+				height: 2.5rem;
+			}
+		}
+	}
+
+	&.membership-plus__list--1 .membership-plus__item {
+		width: calc(100% - 1.25rem);
+	}
+	&.membership-plus__list--2 .membership-plus__item {
+		width: calc(50% - 1.25rem);
+	}
+	&.membership-plus__list--3 .membership-plus__item {
+		width: calc(33.33% - 1.25rem);
+	}
+	&.membership-plus__list--4 .membership-plus__item {
+		width: calc(25% - 1.25rem);
+	}
+	&.membership-plus__list--5 .membership-plus__item {
+		width: calc(20% - 1.25rem);
+	}
+	&.membership-plus__list--6 .membership-plus__item {
+		width: calc(16.66% - 1.25rem);
+	}
+	&.membership-plus__list--7 .membership-plus__item {
+		width: calc(14.28% - 1.25rem);
+	}
+	&.membership-plus__list--8 .membership-plus__item {
+		width: calc(12.5% - 1.25rem);
+	}
+
+	.slider-button {
+		display: block;
+	}
+
+	@include media-breakpoint-down(lg) {
+		.membership-plus__item {
+			width: calc(33.33% - 1.25rem) !important;
+		}
+	}
+
+	@include media-breakpoint-down(xxs) {
+		.membership-plus__item {
+			width: calc(50% - 1.25rem) !important;
+		}
+	}
+
+}
+
+// Membership Plus + Events Module
+.membership-plus-events-module {
+	> .main-container {
+    display: grid;
+    align-items: center;
+
+    @include media-breakpoint-up(xl) {
+    	grid-template-columns: 3fr 2fr;
+    }
+
+    @include media-breakpoint-down(md) {
+    	.container {
+    		padding-left: 0;
+    		padding-right: 0;
+    	}
+    }
+	}
+
+	.section--membership-plus {
+		padding-top: 4.5rem;
+		padding-bottom: 5rem;
+
+		.container {
+			padding-left: 0;
+		}
+
+		@include media-breakpoint-up(xxl) {
+			padding-top: 6.5rem;
+			padding-bottom: 7rem;			
+		}
+	}
+
+	.section--membership-plus:after {
+		content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    z-index: -1;
+    @include media-breakpoint-down(xl) {
+    	width: 300%; //Fill selected background to all width.
+    }
+	}
+
+	.membership-plus__item {
+		text-transform: uppercase;
+	}
+}

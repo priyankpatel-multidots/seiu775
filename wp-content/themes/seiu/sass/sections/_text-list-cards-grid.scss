@@ -1,0 +1,91 @@
+.section--text-list-grid {
+	position: relative;
+
+  padding-bottom: 250px;
+  padding-top: 250px;
+  background: linear-gradient(0deg, #0000001f, #f2f2f2 80%) no-repeat;
+
+	figure.section-bg {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+
+		img {
+			width: 100%;
+			height: 100%;
+    	object-fit: cover;
+		}
+	}
+
+	@include media-breakpoint-down(xl) {
+		padding-top: 150px;
+		padding-bottom: 150px;
+	}
+
+	@include media-breakpoint-down(lg) {
+		padding-top: 30px;
+	}
+}
+
+.text-list-grid {
+	&__list {
+		display: grid;
+		grid-gap: 1rem;
+		text-align: center;
+
+		.section__title + &,
+		.section__description + & {
+			margin-top: 2rem;
+		}
+	}
+
+	&__item {
+		background: rgba(255, 255, 255, 0.85);
+		padding: 2rem 1.5rem;
+		// opacity: 0.85;
+
+		display: flex;
+    flex-wrap: wrap;
+    flex-flow: column;
+    justify-content: center;
+
+		&__desc {
+			margin-top: 1.5rem;
+		}
+
+		ul {
+			padding: 0;
+			margin: 0;
+			list-style: none;
+			margin-top: 2rem;
+
+			a {
+				text-decoration: none;
+				color: $color-purple;
+
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+
+		.btn-wrapper {
+			margin-top: auto;
+			text-align: center;
+			width: 100%;
+		}
+	}
+
+	@include media-breakpoint-up(lg) {
+		&__list {
+			grid-template-columns: repeat(3, 1fr);
+		}
+
+		&__item {
+			padding: 2.75rem;
+		}
+	}
+}

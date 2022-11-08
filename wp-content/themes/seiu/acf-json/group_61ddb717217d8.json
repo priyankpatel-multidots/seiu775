@@ -1,0 +1,45 @@
+{
+    "key": "group_61ddb717217d8",
+    "title": "Block - Membership Events",
+    "fields": [
+        {
+            "key": "field_61ddb72b8d4d2",
+            "label": "Title",
+            "name": "block_mmbr_events_title",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 2,
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/membership-events"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "List of events will be pulled automatically from Members API.",
+    "show_in_rest": 0,
+    "modified": 1642426995
+}

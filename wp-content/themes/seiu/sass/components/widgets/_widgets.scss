@@ -1,0 +1,67 @@
+.widget {
+	margin: 0 0 1.5em;
+
+	// Make sure select elements fit in widgets.
+	select {
+		max-width: 100%;
+	}
+}
+
+body {
+	overflow-x: initial !important;
+}
+
+// customizer css
+main a {
+	color: #4e2685;
+}
+.float-none {
+	float: none;
+}
+.d-flex {
+	display: flex;
+}
+@media (max-width: 749.98px) {
+	.btn-wrapper .btn-wrapper--join {
+		float: none;
+		width: 100%;
+	}
+}
+.page--new-members .btn-wrapper {
+	float: none;
+}
+
+#tfa_1967 #tfa_192-L {
+	width: auto !important;
+}
+.contact-your-organizer-form-wrapper .wForm .inputWrapper {
+	width: 100%;
+}
+.contact-your-organizer-form-wrapper .wForm .inputWrapper textarea {
+	width: 100% !important;
+}
+
+.res .wp-block-columns .wp-block-column p {
+	font-size: inherit;
+	line-height: inherit;
+}
+.ip-guidelines .ip-guidelines-wrap ul li {
+	color: inherit;
+}
+.page--new-members
+	.page__content
+	.content-with-video
+	.wp-block-columns
+	.wp-block-column:nth-child(2)::before {
+	background-color: var(--wp--preset--color--gray) !important;
+}
+
+.page--new-members
+	.page__content
+	.content-with-video
+	.wp-block-columns
+	.wp-block-column:nth-child(2)
+	.sidebar-menu {
+	padding-left: 0;
+}
+// end of customizer css

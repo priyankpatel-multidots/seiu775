@@ -1,0 +1,9 @@
+{
+	"version": 4,
+	"file": "admin-editor.css",
+	"sources": [
+		"sass/admin-editor.scss"
+	],
+	"names": [],
+	"mappings": "AAAA,gCAAgC;AAChC,AAAA,SAAS,CAAC;CACR,SAAS,EAAC,IAAI;CACf"
+}

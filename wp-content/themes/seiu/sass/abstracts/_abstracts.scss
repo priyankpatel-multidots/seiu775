@@ -1,0 +1,77 @@
+@import "functions";
+
+$site-max-width: 1920px;
+$container-default: 1536px;
+$container-md: 1336px;
+$container-sm: 1216px;
+$container-xs: 1090px;
+
+$header_height: 65px;
+
+
+// Grid breakpoints
+//
+// Define the minimum dimensions at which your layout will change,
+// adapting to different screen sizes, for use in media queries.
+
+// scss-docs-start grid-breakpoints
+$grid-breakpoints: (
+        zero: 0,
+        xxs: 350px,
+        xs: 400px,
+        sm: 576px,
+        md: 750px,
+        tab: 782px,
+        lg: 992px,
+        container-xs: 1090px,
+        xl: 1160px,
+        container-sm: 1216px,
+        xxl: 1300px,
+        container-md: 1336px,
+) !default;
+// scss-docs-end grid-breakpoints
+
+@include _assert-ascending($grid-breakpoints, "$grid-breakpoints");
+@include _assert-starts-at-zero($grid-breakpoints, "$grid-breakpoints");
+
+$zindex-1: 100;
+$zindex-2: 200;
+$zindex-3: 300;
+$zindex-4: 400;
+$zindex-5: 500;
+$zindex-6: 600;
+$zindex-7: 700;
+$zindex-8: 800;
+$zindex-9: 900;
+$zindex-10: 1000;
+
+$zindex-dropdown: 1000 !default;
+$zindex-sticky: 1020 !default;
+$zindex-fixed: 1030 !default;
+$zindex-modal-backdrop: 1040 !default;
+$zindex-modal: 105000 !default;
+$zindex-popover: 1060 !default;
+$zindex-tooltip: 1070 !default;
+
+
+$offcanvas-panel-width: 216px;
+$offcanvas-panel-width-md: 376px;
+
+// Header
+
+$header-height: 59px;
+$header-height-md: 51px;
+$header-btn-width: 50px;
+$header-icon-size: 20px;
+
+$grid-gutter-width: 2rem;
+
+$wpadminBarMobileHeight: 46px;
+$wpadminBarHeight: 32px;
+
+@import "variables/colors";
+@import "variables/typography";
+@import "variables/structure";
+@import "variables/columns";
+
+@import "mixins/mixins";

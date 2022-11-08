@@ -1,0 +1,69 @@
+.pagination {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    .page-numbers {
+        background-color: transparent;
+        color: $color-gray;
+        font-weight: bold;
+        cursor: pointer;
+        outline: none;
+        padding: 6px 10.5px;
+        transition: all ease 0.3s;
+
+        &:not(.custom-arrow):hover,
+        &:not(.custom-arrow):active {
+            color: $color-primary;
+        }
+    }
+
+    .prev,
+    .next {
+        width: 26px;
+        min-width: 26px;
+        height: 26px;
+        margin-left: 14px;
+        border-radius: 100%;
+        background-color: $color-primary;
+        position: relative;
+
+        &.disabled {
+            opacity: 0.25;
+        }
+
+        &.custom-arrow a,
+        i {
+            mask-image: url('/wp-content/themes/seiu/images/svg/icon-cta-arrow.svg');
+            width: 26px;
+            height: 26px;
+            display: block;
+            background-color: $color-white;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+    .prev {
+        margin-right: 14px;
+        margin-left: 0;
+
+        &.custom-arrow a,
+        i {
+            transform: rotate(-180deg);
+        }
+    }
+
+    [aria-current="page"] {
+        box-shadow: none;
+        background: none;
+        background-color: transparent;
+        color: $color-primary;
+        &:hover{
+            box-shadow: none;
+            background: none;
+            background-color: transparent;
+            color: $color-primary
+        }
+    }
+}

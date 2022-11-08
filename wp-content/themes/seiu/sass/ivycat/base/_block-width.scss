@@ -1,0 +1,156 @@
+.block-editor-content, .page__content .entry-content {
+  > * {
+    max-width: $container-md;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 3rem;
+    padding-right: 3rem;
+
+    &.wp-block-group, &.wp-block-columns {
+      padding-top: 4rem;
+      padding-bottom: 4rem;
+
+      @include media-breakpoint-down(container-md) {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+      }
+
+      @include media-breakpoint-down(md) {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+      }
+    }
+
+    @include media-breakpoint-down(container-md) {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+
+    @include media-breakpoint-down(md) {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+
+    &.alignwide {
+      max-width: $container-default;
+    }
+
+    &.alignfull {
+      max-width: none;
+      /*padding-left: 2rem;
+      padding-right: 2rem;*/
+
+      .alignwide {
+        max-width: $container-default;
+        margin-left: auto !important;
+        margin-right: auto !important;
+      }
+    }
+
+    > section {
+      padding: 0;
+    }
+  }
+
+  > p {
+    + h1, + h2, + h3, + h4, + h5, + h6 {
+      margin-top: 3rem;
+    }
+  }
+}
+
+.page__content .container .entry-content > * {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.wp-block-separator {
+  border: none;
+  border-top: 1px solid #eee;
+  margin: 2.5rem auto 2rem;
+}
+
+.wp-block-pullquote {
+  border-top: 2px solid #7a716c;
+  border-bottom: 2px solid #7a716c;
+  padding: 1.35em 0 1rem;
+  color: #7a716c;
+}
+
+.wp-block-gallery {
+  &.aligncenter {
+    justify-content: center;
+  }
+
+  .blocks-gallery-item {
+    figure {
+      align-items: center;
+    }
+  }
+}
+
+.wp-block-cover {
+  .wp-block-cover__inner-container {
+    > .wp-block-columns {
+      margin: 0;
+      @include media-breakpoint-down(sm) {
+        // justify-content: center;
+        width: 100%;
+        flex-direction: column;
+      }
+    }
+
+    > *:not(.alignwide):not(.alignfull) {
+      max-width: calc(#{$container-md} - 6rem);
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
+
+.wp-block-group {
+  &.has-background {
+    > *:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+#breadcrumbs {
+  margin-bottom: 1rem;
+}
+
+*[style^="font-size"] {
+  > * {
+    font-size: inherit;
+  }
+}
+
+$spacings: 0, 1, 2, 3, 4, 5, 6;
+
+@each $spacing in $spacings {
+  .mt-#{$spacing}, .my-#{$spacing}, .m-#{$spacing} {
+    margin-top: calc(.5rem * #{$spacing}) !important;
+  }
+  .mb-#{$spacing}, .my-#{$spacing}, .m-#{$spacing} {
+    margin-bottom: calc(.5rem * #{$spacing}) !important;
+  }
+  .ml-#{$spacing}, .mx-#{$spacing}, .m-#{$spacing} {
+    margin-left: calc(.5rem * #{$spacing}) !important;
+  }
+  .mr-#{$spacing}, .my-#{$spacing}, .m-#{$spacing} {
+    margin-right: calc(.5rem * #{$spacing}) !important;
+  }
+  .pt-#{$spacing}, .py-#{$spacing}, .p-#{$spacing} {
+    padding-top: calc(.5rem * #{$spacing}) !important;
+  }
+  .pb-#{$spacing}, .py-#{$spacing}, .p-#{$spacing} {
+    padding-bottom: calc(.5rem * #{$spacing}) !important;
+  }
+  .pl-#{$spacing}, .px-#{$spacing}, .p-#{$spacing} {
+    padding-left: calc(.5rem * #{$spacing}) !important;
+  }
+  .pr-#{$spacing}, .px-#{$spacing}, .p-#{$spacing} {
+    padding-right: calc(.5rem * #{$spacing}) !important;
+  }
+}

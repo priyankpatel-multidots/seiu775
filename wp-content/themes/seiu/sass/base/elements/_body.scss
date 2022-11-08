@@ -1,0 +1,31 @@
+body {
+  background: $color__background-body; // Fallback for when there is no custom background color defined.
+  &.page-template-page-blocks-editor, &.page-template-page-blocks-without-header, &.page-template-page-blocks-editor-gray-bg {
+    .page__content {
+      .entry-content {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+
+        > *:first-child {
+          margin-top: 0;
+
+          &:not(.has-background) {
+            padding-top: 0;
+            margin-bottom: 0;
+          }
+          + *:not(.has-background) {
+            padding-top: 0;
+          }
+        }
+
+        > *:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  &.page-template-page-blocks-editor, &.page-template-page-blocks-without-header {
+    background: $color-white;
+  }
+}

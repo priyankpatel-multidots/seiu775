@@ -1,0 +1,342 @@
+// -----------------------------------------------------------------------------
+// General off-canvas styles
+
+// Some transition helpers for the moveables
+.header, .main, .footer {
+  transition: transform .2s ease-in-out;
+  transform: translate3d(0, 0, 0);
+  @include media-breakpoint-down(sm) {
+    transform: none; // For mobile filter, disable transform.
+  }
+}
+
+// Cover the unclickables
+.overlay {
+  position: fixed;
+  z-index: $zindex-modal-backdrop;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  background: $color-white;
+  transition: opacity .2s ease-in-out .2s, transform 0s .4s;
+  transform: translate3d(-100%, 0, 0);
+  [class*='panel-open--'] & {
+    opacity: .45;
+    transition: opacity .2s ease-in-out .2s;
+    transform: translate3d(0, 0, 0);
+  }
+  .is-loading & {
+    display: none;
+  }
+}
+
+// All panels are fixed
+.offcanvas-panel {
+  position: fixed;
+  z-index: $zindex-modal;
+  top: 0;
+  bottom: 0;
+  width: $offcanvas-panel-width-md;
+  background: $color-white;
+  max-width: 90%;
+  transition: transform .2s ease-in-out;
+  padding-top: 0;
+  padding-bottom: 0;
+
+  .is-loading & {
+    display: none;
+  }
+}
+
+// Panel header
+.offcanvas-panel-header {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  min-height: 3.5rem;
+  background-color: $color-white;
+  border-bottom: 30px solid $color-purple;
+  &__heading {
+    margin: 0;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 0;
+    padding: 1rem;
+  }
+  &__btn {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    display: block;
+    padding: (($header-height - $header-icon-size - 1) / 2) (($header-btn-width - $header-icon-size) / 2);
+    background: none;
+    border: 0;
+    color: $color-primary;
+    cursor: pointer;
+
+    &:hover {
+      background: none;
+      border-color: transparent;
+    }
+
+    &--left {
+      left: 0;
+    }
+    &--right {
+      right: 0;
+    }
+  }
+
+  .custom-logo {
+    max-width: 3rem;
+  }
+}
+
+// Panel body
+.offcanvas-panel-body {
+  &--empty {
+    display: none;
+    text-align: center;
+    padding: ($grid-gutter-width * 3) 0;
+    [class$='--empty'] & {
+      display: block;
+    }
+  }
+}
+
+// Panel footer
+.offcanvas-panel-footer {
+  &--fixed {
+    position: absolute;
+    left: 1px;
+    right: 0;
+    bottom: 0;
+    background-color: $color-white;
+  }
+  [class$='--empty'] & {
+    display: none;
+  }
+}
+
+// Quickfix to prevent `body` scrolling
+// JS-fu iOS
+// Also move the movables
+[class*='panel-open--'] {
+  overflow: hidden;
+}
+
+// -----------------------------------------------------------------------------
+// Mobile Menu
+
+// Menu enters from right to left
+.offcanvas-panel--mobile-menu {
+  right: 0;
+  width: 100%;
+  max-width: 100%;
+  box-shadow: inset -1px 0 0 $color-gray;
+  transform: translate3d(100%, 0, 0);
+  .panel-open--mobile-menu & {
+    transition: transform .2s ease-in-out;
+    transform: translate3d(0, 0, 0);
+  }
+
+  .is-search-form {
+    input[type="search"] {
+      border-radius: 0;
+      -webkit-appearance: none;
+    }
+  }
+}
+
+.panel-open--mobile-menu {
+  .header, .main, .footer {
+    // transform: translate3d(($offcanvas-panel-width-md - $header-btn-width), 0, 0);
+  }
+}
+
+.panel-mobile-menu {
+  .offcanvas-panel-header {
+    &__logo {
+      filter: invert(50%);
+    }
+  }
+  &__items {
+    max-height: calc(100% - 59px);
+    overflow-y: scroll;
+    padding: 0 $grid-gutter-width $header-height * 1.5;
+  }
+  &__header {
+    border-bottom: 1px solid $color-gray;
+  }
+  &__nav-header {
+    margin: 0;
+  }
+  &__link {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 20px 0;
+    text-align: left;
+    color: black;
+    cursor: pointer;
+    background-color: transparent;
+    .icon {
+      margin-right: 6px;
+    }
+    &--icon {
+      padding: 13px 0;
+    }
+    &:focus {
+      box-shadow: none;
+    }
+    &__plus-minus-toggle {
+      position: absolute;
+      top: calc(50% - 2px);
+      right: 0;
+      &::before,
+      &::after{
+        height: 2px;
+        width: 11px;
+      }
+    }
+  }
+  &__collapseDrawer {
+    padding-left: 16px;
+    &--inner {
+      border-left: 1px solid $color-gray;
+      margin: 20px 0 30px;
+    }
+    &--inner &__link {
+      &:first-child {
+        padding-top: 0;
+      }
+      &:last-child {
+        padding-bottom: 0;
+      }
+    }
+  }
+  .offcanvas-panel-footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: $header-height;
+    background-color: $color-gray;
+    padding-top: $grid-gutter-width / 3;
+    text-align: center;
+    &__logo {
+      padding-left: $grid-gutter-width / 2;
+    }
+    &__link {
+      color: white;
+    }
+  }
+}
+
+// Mobile Nav Menu Items
+.panel-mobile-menu__items {
+  height: 100%;
+  background: $color-white;
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+  }
+  ul.menu {
+    > .menu-item {
+      border-bottom: 1px solid $color-gray;
+      padding: 1rem 0;
+      > a {
+        font-size: 18px;
+        letter-spacing: 0.833px;
+      }
+    }
+  }
+
+  ul.sub-menu {
+    display: none;
+    padding-left: 1.5rem;
+    padding-top: 1rem;
+  }
+
+  li {
+    position: relative;
+    padding: 0.5rem 0;
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: $color-almost-black;
+    fill: $color-almost-black;
+    //white-space: nowrap;
+
+    &[target="_blank"]::before {
+      content: '';
+      width: 17px;
+      height: 17px;
+      display: inline-block;
+      background-image: url('/wp-content/themes/seiu/images/new-tab-icon.png');
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      margin-top: 3px;
+      margin-right: 6px;
+      pointer-events: none;
+    }
+
+    svg {
+      margin-right: 6px;
+    }
+  }
+
+  .panel-mobile-menu__link {
+    font-size: 18px;
+    letter-spacing: 0.833px;
+    padding: 1rem 0;
+  }
+
+
+  .menu-item-has-children {
+    >a span.menu-toggle {
+      right: 0;
+      position: absolute;
+      top: 0.9rem;
+      height: 1.5rem;
+      width: 1.5rem;
+    }
+
+    >a span.menu-toggle:before,
+    >a span.menu-toggle:after{
+      background: $color-gray;
+      content: '';
+      height: 3px;
+      width: 1.25rem;
+      transition: transform 500ms ease;
+      right: 0.1rem;
+      position: absolute;
+      top: 0.65rem;
+    }
+    >a span.menu-toggle:after {
+      transform: rotate(90deg);
+    }
+    >a span.menu-toggle:before {
+      transform: rotate(180deg);
+    }
+    &.active {
+      >a span.menu-toggle:after {
+        transform: rotate(0deg);
+      }
+    }
+  }
+}

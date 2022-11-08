@@ -1,0 +1,88 @@
+{
+  "version": 2,
+  "settings": {
+    "color": {
+      "palette": [
+        {
+          "name": "Purple",
+          "slug": "purple",
+          "color": "#582B81"
+        },
+        {
+          "name": "Purple 2",
+          "slug": "purple-2",
+          "color": "#6C4889"
+        },
+        {
+          "name": "Purple 4",
+          "slug": "purple-4",
+          "color": "#AB93CB"
+        },
+        {
+          "name": "Gray",
+          "slug": "gray",
+          "color": "#f2f2f2"
+        },
+        {
+          "name": "Soft Peach",
+          "slug": "soft-peach",
+          "color": "#f2edf7"
+        },
+        {
+          "name": "Yellow 3",
+          "slug": "yellow-3",
+          "color": "#FEE479"
+        },
+        {
+          "name": "Yellow 4",
+          "slug": "yellow-4",
+          "color": "#FEEA99"
+        },
+        {
+          "name": "Yellow 5",
+          "slug": "yellow-5",
+          "color": "#FEF4C9"
+        },
+        {
+          "name": "Black",
+          "slug": "black",
+          "color": "#000000"
+        },
+        {
+          "name": "White",
+          "slug": "white",
+          "color": "#FFFFFF"
+        }
+      ]
+    },
+    "layout": {
+      "contentSize": "1240px",
+      "wideSize": "1440px"
+    },
+    "blocks": {
+      "core/button": {
+        "color": {
+          "custom": true
+        }
+      }
+    }
+  },
+  "styles": {
+    "blocks": {
+      "core/button": {
+        "spacing": {
+          "margin": {
+            "bottom": "0"
+          }
+        },
+        "border": {
+          "style": "none"
+        },
+        "color": {
+          "text": "var(--wp--preset--color--white)",
+          "background": "var(--wp--preset--color--purple)"
+        }
+      }
+    }
+  }
+}

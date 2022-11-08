@@ -1,0 +1,119 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+	clear: both;
+  // color: $color__text-heading;
+  font-family: $font__main;
+  font-style: normal;
+  line-height: 1.35;
+  margin-bottom: 1.25rem;
+  margin-top: 0;
+
+  &:last-child,
+  &:last-of-type {
+    // margin-bottom: 0;
+  }
+}
+
+h1,
+.h1 {
+  font-weight: bold;
+  font-size: 60px;
+  line-height: 1.167;
+
+  @include media-breakpoint-down(xxl) {
+  }
+  @include media-breakpoint-down(xl) {
+    font-size: 50px;
+  }
+
+  @include media-breakpoint-down(lg) {
+  }
+
+  @include media-breakpoint-down(md) {
+    font-size: 40px;
+    line-height: 1.35;
+  }
+}
+
+h2,
+.h2 {
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 1.2;
+
+  @include media-breakpoint-down(xxl) {
+  }
+  @include media-breakpoint-down(xl) {
+  }
+
+  @include media-breakpoint-down(lg) {
+    font-size: 34px;
+    line-height: 1.35;
+  }
+  @include media-breakpoint-down(md) {
+    font-size: 29px;
+  }
+}
+
+h3,
+.h3 {
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 1.25em;
+
+  @include media-breakpoint-down(xxl) {
+  }
+
+  @include media-breakpoint-down(xl) {
+    font-size: 28px;
+  }
+
+  @include media-breakpoint-down(lg) {
+    font-size: 24px;
+  }
+}
+
+h4,
+.h4 {
+  font-weight: bold;
+  font-size: 24px;
+
+  @include media-breakpoint-down(xl) {
+  }
+
+  @include media-breakpoint-down(lg) {
+    font-size: 20px;
+  }
+
+  @include media-breakpoint-down(md) {
+  }
+}
+
+h5,
+.h5 {
+  font-weight: 500;
+  font-size: 18px;
+
+  @include media-breakpoint-down(xl) {
+  }
+
+  @include media-breakpoint-down(lg) {
+  }
+}
+
+h6,
+.h6 {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.5;
+}

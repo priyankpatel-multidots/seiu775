@@ -1,0 +1,54 @@
+.section--featured-instagrams {
+  .featured-instagrams__list {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1.5rem;
+    align-items: center;
+    margin: 2rem auto 0;
+
+    @include media-breakpoint-up(md) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  .featured-instagrams__item {
+    background: $color-primary;
+
+    &--info {
+      color: $color-white;
+      padding: 1.5rem 2.75rem;
+      font-size: 1.5rem;
+      font-weight: bold;
+
+      svg {
+        width: 2.5rem;
+        height: 2.5rem;
+        fill: $color-white;
+      }
+      p {
+        margin-bottom: 1rem;
+        line-height: 1.1;
+      }
+    }
+
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+
+    @include media-breakpoint-up(xl) {
+      &--info {
+        color: $color-white;
+        font-size: 30px;
+        padding: 1.5rem 3.75rem;
+
+        svg {
+          width: 3.5rem;
+          height: 3.5rem;
+        }
+      }
+    }
+  }
+}
+

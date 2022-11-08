@@ -1,0 +1,40 @@
+.events-module {
+	.section__title {
+		color: $color-primary;
+		font-weight: bold;
+		text-transform: uppercase;
+	}
+
+	&__list {
+		margin-top: 1.5rem;
+		display: grid;
+		grid-gap: 2rem;
+	}
+
+	.event {
+		&__title {
+		}
+		&__date {
+			font-weight: 400;
+		}
+		
+		&__description {
+			font-weight: 400;
+			margin-top: 1.5rem;
+			@include media-breakpoint-up(md) {
+				font-size: 20px;
+			}
+
+			@include media-breakpoint-up(xxl) {
+				margin-top: 2.5rem;
+			}
+		}
+
+		.btn {
+			margin-top: 1.5rem;
+			@include media-breakpoint-up(xxl) {
+				margin-top: 2.5rem;
+			}
+		}
+	}
+}

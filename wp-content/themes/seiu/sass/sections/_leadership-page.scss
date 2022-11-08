@@ -1,0 +1,128 @@
+.leadership-page {
+  background: #ffffff;
+  padding-top: 3rem;
+  padding-bottom: 2.5rem;
+}
+
+.leadership-page__cards-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  gap:20px;
+}
+
+.leadership-page__card {
+  // -ms-flex-preferred-size: 23%;
+  flex-basis: auto;
+  margin-bottom: 30px;
+  width: 23%;
+  min-width: 243px;
+  max-width: 243px;
+}
+
+.leadership-page__card-image {
+  max-width: 243px;
+  margin: 0 auto;
+  display: block;
+}
+
+.leadership-page__card-name-and-email {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  max-width: 243px;
+  margin: 20px auto 0;
+}
+
+.leadership-page__name {
+  a {
+    font-weight: 700;
+    color: $color-primary;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.leadership-page__email {
+  a {
+    color: $color-primary;
+
+    &:hover {
+      color: $color-yellow;
+    }
+  }
+}
+
+
+.leadership-page__title {
+  max-width: 243px;
+  margin: 0 auto;
+}
+
+.leadership-page-bottom {
+  padding-top: 85px;
+  padding-bottom: 85px;
+}
+
+.leadership-page-bottom__columns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.leadership-page-bottom__column {
+  -ms-flex-preferred-size: 20%;
+  flex-basis: 20%;
+  ul {
+    padding-left: 0;
+
+    li {
+      list-style-type: none;
+
+      strong {
+        color: $color_primary;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down(tab) {
+  .leadership-page__card {
+    -ms-flex-preferred-size: 48%;
+    flex-basis: 48%;
+  }
+
+  .leadership-page-bottom__column {
+    flex-basis: 48%;
+    -ms-flex-preferred-size: 48%;
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .leadership-page__card {
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    min-width: auto;
+    max-width: none;
+  }
+
+  .leadership-page-bottom__column {
+    flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+  }
+}
